@@ -1,8 +1,14 @@
 server:
   port: 8003
 spring:
+  application:
+    name: book-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://rm-bp19d6yy42f0w155fso.mysql.rds.aliyuncs.com:3306/guest
     username: guest01
     password: guest@123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8801/eureka,http://localhost:8802/eureka
