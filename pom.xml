@@ -9,6 +9,7 @@
         <module>borrow-service</module>
         <module>commons-entity</module>
         <module>eureka-server</module>
+        <module>gateway-server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
