@@ -13,9 +13,12 @@ spring:
     name: gateway-server
   cloud:
     gateway:
-      routes:
-      - id:
+      routes: #配置路由，这里是个列表
+      - id: borrow-service
         uri: lb://borrow-service
+        predicates: #断言，
+        - Path=/borrow/** #只要是访问这个路径，都路由到上面指定到服务地址。
+      - id: book-service
+        uri: lb://book-service
         predicates:
-        - Path=/borrow/**
-
+        - Path=/book/**

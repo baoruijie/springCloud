@@ -1,0 +1,24 @@
+server:
+  port: 8700
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+#          方式一 本地git
+          uri: file://${user.home}/codeSheep/local/localGitRepoTestConfiguration/config-repo
+          default-label: master
+          #通过 http://localhost:8700/master/book-service-dev.yml 获取配置信息。
+          #或者 http://localhost:8700/book-service/dev/master 获取配置信息。
+#          方式二 github仓库
+#          uri: https://......  #仓库地址
+#          search-paths:        #配置中心
+#          username:
+#          password:
+#        mysql:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8801/eureka,http://localhost:8802/eureka

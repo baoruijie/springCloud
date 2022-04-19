@@ -41,11 +41,15 @@
 ## step6:监控 pass
 
 ## step7：gateway路由网关 路由过滤器
+无需增加web依赖，gateway是使用的webFlus的。
+目前mac的M1芯片native方法好像不支持。
 
-
-
-## step8：配置中心
-
+## step8：配置中心config
+一般只是把可能变动的放到配置中心。
+举例1：git本地配置中心&github配置中心。 在book-service模块添加bootstrap.yml配置文件。详见配置。
+在resource中增加bootstrap.yml文件（名字固定，且中心类似云的标志）
+在pom.xml里添加配置中信依赖，包括bootstrap依赖。
+举例2：在user-service中增加mysql配置中心。
 
 ## step9：分布式ACP原则。
 
