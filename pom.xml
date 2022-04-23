@@ -11,6 +11,7 @@
         <module>eureka-server</module>
         <module>gateway-server</module>
         <module>config-server</module>
+        <module>return-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -1,0 +1,20 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: return-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://baodashuai.mysql.rds.aliyuncs.com:3306/guest
+    username: guest01
+    password: guest@123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8801/eureka,http://localhost:8802/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+#feign:
+#  circuitbreaker:  #熔断
+#    enabled: true
