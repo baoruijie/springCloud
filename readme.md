@@ -11,7 +11,7 @@
 ## step2:二期注意事项（后续补充）
 0.springCloud各个模块：eureka,[openFeign],loadBalance,hystrix,gateway,config,CAP
 1.首先父模块增加版本springcloud管理,后eureka增加依赖spring-cloud-starter-netflix-eureka-server。
-3.启动后 http://localhost:8888访问即可。
+3.启动后 http://localhost:port 访问即可。
 4.将模块注册到eureka,添加依赖，配置文件增加注册服务器.
 5.注册完成后会显示unknow服务名，此时配置模块名即可。
 6.增加config类，将指定ip:port调用改为通过服务名调用。
@@ -49,7 +49,7 @@
 举例1：git本地配置中心&github配置中心。 在book-service模块添加bootstrap.yml配置文件。详见配置。
 在resource中增加bootstrap.yml文件（名字固定，且中心类似云的标志）
 在pom.xml里添加配置中信依赖，包括bootstrap依赖。
-举例2：在user-service中增加mysql配置中心。
+举例2：在user-service中增加mysql配置中心。有时间补充。
 
 ## step9：分布式ACP原则。
 

@@ -13,10 +13,10 @@ spring:
           #通过 http://localhost:8700/master/book-service-dev.yml 获取配置信息。
           #或者 http://localhost:8700/book-service/dev/master 获取配置信息。
 #          方式二 github仓库
-#          uri: https://......  #仓库地址
-#          search-paths:        #配置中心
-#          username:
-#          password:
+#          uri: https://github.com/baoruijie/config-repo.git  #仓库地址
+#          search-paths: master      #配置中心
+#          username: 15990572573@163.com
+#          password: Qnvbofnh8899
 #        mysql:
 eureka:
   client:
