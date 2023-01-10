@@ -1,8 +1,5 @@
 package com.bao.design.d01_singleton;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @desc
  * @author 骚包
@@ -10,25 +7,25 @@ import java.util.List;
  * @version 1.0
  */
 
-public class SingletonLockDemo3 {
-    private static SingletonLockDemo3 instance = null;
-    private static SingletonLockDemo3 instance2 = null;
-    private static volatile SingletonLockDemo3 instance3 = null;
+public class Singleton3LockDemo {
+    private static Singleton3LockDemo instance = null;
+    private static Singleton3LockDemo instance2 = null;
+    private static volatile Singleton3LockDemo instance3 = null;
 
-    private SingletonLockDemo3(){}
+    private Singleton3LockDemo(){}
 
-    public static synchronized SingletonLockDemo3 getInstance(){
+    public static synchronized Singleton3LockDemo getInstance(){
         if(instance == null){
-            instance = new SingletonLockDemo3();
+            instance = new Singleton3LockDemo();
         }
         return instance;
     }
     // 2.把sychronized加在if(instance==null)判断语句里面，保证instance未实例化的时候才加锁
-    public static synchronized SingletonLockDemo3 getInstance2() {
+    public static synchronized Singleton3LockDemo getInstance2() {
         if (instance2 == null) {
-            synchronized (SingletonLockDemo3.class) {
+            synchronized (Singleton3LockDemo.class) {
                 if (instance2 == null) {
-                    instance2 = new SingletonLockDemo3();
+                    instance2 = new Singleton3LockDemo();
                 }
             }
         }
@@ -36,11 +33,11 @@ public class SingletonLockDemo3 {
     }
 
     // 3.new一个对象的代码是无法保证顺序性的，因此，我们需要使用另一个关键字volatile保证对象实例化过程的顺序性
-    public static synchronized SingletonLockDemo3 getInstance3() {
+    public static synchronized Singleton3LockDemo getInstance3() {
         if (instance3 == null) {
             synchronized (instance3) {
                 if (instance3 == null) {
-                    instance3 = new SingletonLockDemo3();
+                    instance3 = new Singleton3LockDemo();
                 }
             }
         }
