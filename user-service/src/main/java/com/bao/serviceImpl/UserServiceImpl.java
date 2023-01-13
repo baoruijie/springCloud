@@ -18,4 +18,11 @@ public class UserServiceImpl implements UserService {
         System.out.println("UserServiceImpl" + id);
         return userMapper.getUserById(id);
     }
+
+
+    @Override
+    public int updateById(int id) {
+
+        return 0;
+    }
 }

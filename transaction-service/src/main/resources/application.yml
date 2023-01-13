@@ -1,0 +1,12 @@
+server:
+  port: 8008
+  servlet:
+    context-path: /demo
+spring:
+  application:
+    name: demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://baodashuai.mysql.rds.aliyuncs.com:3306/guest
+    username: guest01
+    password: guest@123456
